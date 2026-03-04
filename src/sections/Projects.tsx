@@ -129,8 +129,8 @@ const Projects = () => {
               transitionTimingFunction: "var(--ease-expo-out)",
             }}
           >
-            A curated collection of my most impactful work across design,
-            development, and creative direction.
+            Showcase of my work in full-stack development and data engineering,
+            leveraging cloud infrastructure to solve real-world problems.
           </p>
         </div>
 
