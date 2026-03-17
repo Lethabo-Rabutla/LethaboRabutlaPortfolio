@@ -10,12 +10,14 @@ interface Project {
   image: string;
   liveUrl?: string;
   githubUrl?: string;
+  restricted?: boolean;
 }
 
 const Projects = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  const [expandedProject, setExpandedProject] = useState<number | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -41,9 +43,11 @@ const Projects = () => {
       title: "Face Recognition ATM System (School Project)",
       category: "Web Development",
       description:
-        "Engineered a secure banking application featuring facial recognition for user authentication. Utilized OpenCV and machine learning algorithms to ensure accurate and efficient identity verification, enhancing security and user experience.",
+        "Source code is restricted as it is institutional property. I can, however, explain the full system design, technologies used, and how the solution was implemented.",
       tech: ["Python", "Flask", "JavaScipt", "ML"],
       image: "/images/FaceRecognition.jpg",
+      githubUrl: "null",
+      restricted: true,
     },
     {
       id: 2,
@@ -53,6 +57,7 @@ const Projects = () => {
         "Developed a custom Python-based ETL pipeline designed to ingest, clean, and transform raw CSV datasets. This system automates the normalization of incosistens data, ensuring it is business-ready for analytics and reporting. ",
       tech: ["Python", "Pandas", "SQL", "Data cleaning"],
       image: "/images/DataCSV.jpg",
+      githubUrl: "https://github.com/Lethabo-Rabutla/softwork-etl-pipeline",
     },
     {
       id: 3,
@@ -62,6 +67,7 @@ const Projects = () => {
         "Built a real-time data integration project that extracts live weather information via REST APIs. The pipeline handles data ingestion and transform JSON responses into structured formats for storage and visualization",
       tech: ["Python", "REST APIs", "JSON", "Airflow"],
       image: "/images/LiveData.webp",
+      githubUrl: "https://github.com/Lethabo-Rabutla/Weather_ETL",
     },
     {
       id: 4,
@@ -71,6 +77,7 @@ const Projects = () => {
         "Helped developed a Java-based platform designed to bridge the gap between job seekers and employers. The focuses on matching the algorithms to connect candidates with relevant opportunities based on their skill sets and professional profiles.",
       tech: ["Java", "JavaScript", "Css", "PostgreSQL"],
       image: "/images/WebDev.jpg",
+      githubUrl: "https://github.com/NkgopolengGift/JobMatchup",
     },
   ];
 
@@ -190,9 +197,28 @@ const Projects = () => {
                     }`}
                     style={{ transitionTimingFunction: "var(--ease-expo-out)" }}
                   >
-                    <p className="text-gray-300 text-sm mb-4 line-clamp-2">
+                    <p
+                      className={`text-gray-300 text-sm mb-2 transition-all duration-500 ${
+                        expandedProject === project.id
+                          ? "max-h-40"
+                          : "max-h-12 overflow-hidden"
+                      }`}
+                    >
                       {project.description}
                     </p>
+
+                    <button
+                      onClick={() =>
+                        setExpandedProject(
+                          expandedProject === project.id ? null : project.id,
+                        )
+                      }
+                      className="text-red-400 text-xs hover:underline"
+                    >
+                      {expandedProject === project.id
+                        ? "Read less"
+                        : "Read more"}
+                    </button>
                     <div className="flex gap-3">
                       {project.liveUrl && (
                         <a
@@ -203,14 +229,22 @@ const Projects = () => {
                           <span>Live Demo</span>
                         </a>
                       )}
-                      {project.githubUrl && (
-                        <a
-                          href={project.githubUrl}
-                          className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white hover:bg-white/20 transition-colors duration-300"
-                        >
-                          <Github className="w-4 h-4" />
-                          <span>Code</span>
-                        </a>
+                      {project.restricted ? (
+                        <div className="px-4 py-2 bg-white/5 rounded-full text-xs text-gray-400 border border-white/10">
+                          Code not publicly available
+                        </div>
+                      ) : (
+                        project.githubUrl && (
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white hover:bg-white/20 transition-colors duration-300"
+                          >
+                            <Github className="w-4 h-4" />
+                            <span>Code</span>
+                          </a>
+                        )
                       )}
                     </div>
                   </div>
