@@ -40,6 +40,18 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
+      title: "Shadow AI Guardrail",
+      category: "AI GOVERNANCE",
+      description:
+        "An AI proxy system that strips PII from employee prompts before they reach any LLM. Built for POPIA compliance in SA financial services — detects SA IDs, FICA data, crypto wallets, and AWS keys while preserving business-critical values like transaction amounts. Full audit trail with original vs sanitised prompt logging.",
+      tech: ["Python", "FastAPI", "React", "Presidio", "Open API", "Supabase"],
+      image: "/images/shadow-ai-gurdrail.png",
+      liveUrl: "https://shadow-ai-guardrail.vercel.app/",
+      githubUrl: "null",
+      restricted: true,
+    },
+    {
+      id: 2,
       title: "Face Recognition ATM System (School Project)",
       category: "Web Development",
       description:
@@ -50,7 +62,7 @@ const Projects = () => {
       restricted: true,
     },
     {
-      id: 2,
+      id: 3,
       title: "Automated ETL Pipeline (CSV/File-based)",
       category: "DATA",
       description:
@@ -60,7 +72,7 @@ const Projects = () => {
       githubUrl: "https://github.com/Lethabo-Rabutla/softwork-etl-pipeline",
     },
     {
-      id: 3,
+      id: 4,
       title: "Live Weather Data Pipeline",
       category: "LIVE DATA",
       description:
@@ -70,7 +82,7 @@ const Projects = () => {
       githubUrl: "https://github.com/Lethabo-Rabutla/Weather_ETL",
     },
     {
-      id: 4,
+      id: 5,
       title: "JobMatchUp  (School Project)",
       category: "Web Development",
       description:
