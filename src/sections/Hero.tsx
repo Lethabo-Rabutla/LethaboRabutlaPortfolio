@@ -182,11 +182,13 @@ const Hero = () => {
             transitionTimingFunction: "var(--ease-expo-out)",
           }}
         >
-          I am a Computer Science graduate specializing in building scalable
-          software and robust data achitectures. With hands-on experience in
-          developing ETL pipelines and deploying cloud-based solution on GCP, I
-          focus on transforming complex data into actionable and efficient
-          applications.
+          I am a Software Engineer specializing in full-stack development,
+          AI-powered applications, and backend systems. I have experience
+          designing scalable web applications, building ETL pipelines,
+          developing REST APIs, and deploying production-ready solutions using
+          Docker, Ubuntu Linux, and modern cloud platforms. I enjoy creating
+          reliable software that combines clean architecture, performance, and
+          user-focused design.
         </p>
 
         {/* CTA Buttons */}

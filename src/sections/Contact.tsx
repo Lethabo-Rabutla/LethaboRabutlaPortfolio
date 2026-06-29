@@ -153,8 +153,11 @@ const Contact = () => {
               transitionTimingFunction: "var(--ease-expo-out)",
             }}
           >
-            I’m actively seeking opportunities where I can grow and contribute.
-            If you think I’d be a great fit for your team, I’d love to connect.
+            I’m currently open to opportunities where I can contribute as a
+            Software Engineer, particularly in roles involving full-stack
+            development, backend systems, or AI-driven applications. If you
+            think I could add value to your team, I’d be happy to connect and
+            discuss further.
           </p>
         </div>
 

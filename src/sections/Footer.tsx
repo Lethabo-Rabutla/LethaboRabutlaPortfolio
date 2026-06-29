@@ -78,8 +78,10 @@ const Footer = () => {
               LT
             </a>
             <p className="text-gray-400 max-w-md mb-6 leading-relaxed">
-              Creating digital experiences that matter. Passionate about design,
-              development, and the intersection of art and technology.
+              I create software that solves real problems—combining thoughtful
+              design with solid engineering. From full-stack applications to AI
+              systems and backend infrastructure, I enjoy building technology
+              that is both practical and scalable.
             </p>
             {/* Social Links */}
             <div className="flex gap-3">

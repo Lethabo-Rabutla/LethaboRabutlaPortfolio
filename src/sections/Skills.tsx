@@ -13,6 +13,9 @@ import {
   Cloud,
   Cpu,
   BrainCircuit,
+  Box,
+  GitBranch,
+  Shield,
 } from "lucide-react";
 
 interface Skill {
@@ -51,40 +54,49 @@ const Skills = () => {
 
   const skillCategories: SkillCategory[] = [
     {
-      title: "Languages & Core development",
+      title: "Languages & Core Engineering",
       skills: [
-        { name: "Java", level: 90, icon: Coffee },
-        { name: "Python", level: 85, icon: Terminal },
-        { name: "Javascript / C#", level: 80, icon: Code2 },
-        { name: "Node.js", level: 88, icon: Server },
+        { name: "Java", level: 85, icon: Coffee },
+        { name: "Python", level: 90, icon: Terminal },
+        { name: "JavaScript / TypeScript", level: 88, icon: Code2 },
+        { name: "Node.js", level: 85, icon: Server },
       ],
     },
     {
-      title: "Frameworks & Mobile",
+      title: "Frontend & Mobile Development",
       skills: [
-        { name: "React Native / React", level: 75, icon: Atom },
-        { name: "REST APIs", level: 95, icon: Webhook },
-        { name: "Mobile Development", level: 80, icon: Smartphone },
+        { name: "React", level: 85, icon: Atom },
+        { name: "React Native", level: 75, icon: Smartphone },
+        { name: "REST APIs Integration", level: 90, icon: Webhook },
       ],
     },
     {
-      title: "Data Engineering & Databases",
+      title: "Backend & Data Systems",
       skills: [
-        { name: "ETL Pipelines", level: 60, icon: RefreshCw },
-        { name: "SQL(PostgreSQL/MySQL)", level: 80, icon: Database },
-        { name: "Data Transformation", level: 68, icon: Zap },
+        { name: "PostgreSQL / MySQL", level: 85, icon: Database },
+        { name: "ETL Pipelines", level: 75, icon: RefreshCw },
+        { name: "Data Transformation", level: 70, icon: Zap },
+        { name: "API Design", level: 90, icon: Server },
       ],
     },
     {
-      title: "Cloud & Specialization Tech",
+      title: "DevOps & Deployment",
       skills: [
-        { name: "AWS(Certified Cloud Practioner)", level: 70, icon: Cloud },
-        { name: "Generative AI", level: 65, icon: Cpu },
-        { name: "Machine Learning Basics", level: 67, icon: BrainCircuit },
+        { name: "Docker", level: 85, icon: Box },
+        { name: "Ubuntu / Linux Servers", level: 80, icon: Terminal },
+        { name: "Vercel Deployment", level: 85, icon: Cloud },
+        { name: "Git & GitHub", level: 90, icon: GitBranch },
+      ],
+    },
+    {
+      title: "AI & Emerging Tech",
+      skills: [
+        { name: "AI Guardrails", level: 70, icon: Shield },
+        { name: "Generative AI", level: 75, icon: Cpu },
+        { name: "Prompt Engineering", level: 72, icon: BrainCircuit },
       ],
     },
   ];
-
   return (
     <section
       ref={sectionRef}
@@ -250,11 +262,14 @@ const Skills = () => {
             {[
               "Redis",
               "Next.js",
-              "WordPress",
               "Linux",
+              "Docker",
               "Vite",
               "Git",
               "CI/CD",
+              "REST APIs",
+              "PostgreSQL",
+              "Vercel",
             ].map((skill, index) => (
               <span
                 key={skill}
