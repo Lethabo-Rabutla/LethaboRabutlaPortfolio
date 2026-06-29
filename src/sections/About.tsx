@@ -157,11 +157,15 @@ const About = () => {
                   transitionTimingFunction: "var(--ease-expo-out)",
                 }}
               >
-                My journey in technology began at the Tshwane University of
-                Technology, where I developed a deep interest in how data and
-                software intersect to solve real-world problems. This curiosity
-                led to my final-year project—a Face Recognition ATM system—which
-                combined complex security logic with seamless user interaction
+                My passion for software engineering began at the Tshwane
+                University of Technology, where I built a Face Recognition ATM
+                system as my final-year project. That experience inspired me to
+                pursue software that combines innovation with practical impact.
+                Today, I build full-stack applications, AI-powered tools, and
+                backend systems, with experience in data engineering, Docker,
+                Ubuntu, and cloud deployment. I enjoy taking ideas from concept
+                to production while focusing on clean architecture, scalability,
+                and maintainable code.
               </p>
               <p
                 className={`text-gray-400 leading-relaxed transition-all duration-600 ${
@@ -192,11 +196,14 @@ const About = () => {
                   transitionTimingFunction: "var(--ease-expo-out)",
                 }}
               >
-                When I'm not engineering new features, I’m expanding my
-                expertise in the cloud. As a certified AWS Cloud Practitioner, I
-                am constantly exploring the potential of Generative AI and data
-                engineering to automate tasks and create more intelligent
-                digital experiences.
+                Today, I focus on building production-ready software across the
+                full stack. From AI guardrail applications and modern web
+                platforms to backend services and automated data pipelines, I
+                enjoy solving complex technical challenges with clean
+                architecture and scalable solutions. Whether I'm deploying
+                applications with Docker on Ubuntu or developing intuitive user
+                interfaces, I prioritize performance, security, and
+                maintainability.
               </p>
             </div>
 
